@@ -12,7 +12,7 @@ class Scanner {
   scan(doc) {}
 }
 
-class Fax {
+class Faxes {
   fax(doc) {}
 }
 
@@ -27,7 +27,7 @@ class MultiFunctionPrinter {
   constructor(printer, scanner, fax) {
     this.printer = printer;
     this.scanner = scanner;
-    this.fax = fax;
+    this.faxes = fax;
   }
 
   print(doc) {
@@ -39,7 +39,7 @@ class MultiFunctionPrinter {
   }
 
   fax(doc) {
-    this.fax.fax(doc);
+    this.faxes.fax(doc);
   }
 }
 
@@ -56,7 +56,7 @@ class BasicScanner extends Scanner {
   }
 }
 
-class BasicFax extends Fax {
+class BasicFax extends Faxes {
   fax(doc) {
     console.log("📠 Enviando fax:", doc);
   }
